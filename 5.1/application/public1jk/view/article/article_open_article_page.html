@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {load href="/rko/public/static/css/bootstrap.min.css" /}
+    {load href="/rko/public/static/js/jquery-3.4.1.min.js" /}
+    {load href="/rko/public/static/js/jquery.cookie.js" /}
+    {load href="/rko/public/static/js/bootstrap.min.js" /}
+    {load href="/rko/public/static/js/layer.js" /}
+
+    {load href="/rko/public/static/css/article_open_article_page.css" /}
+    {load href="/rko/public/static/js/article_open_article_page.js" /}
+</head>
+<body style="background: url(/rko/public/static/img/imgtop2.jpg) 0 300px">
+	<div id="header">
+		
+	</div>
+	
+	<div id="tbody">
+		<div id="wz_xx" class="col-md-12">
+		    <!-- 文章内容ID:{$article_id_jg_return['msg']['content_id']} -->
+			<div class="jumbotron">
+			    <div class="container" style="width: 100%;">
+					<div style="width: 100%;">
+						<div style="float: right;">
+							<span class="badge">文章ID:<span id="wz_id">{$article_id_jg_return['msg']['id']}</span></span>
+							<span class="badge">{$article_id_jg_return['msg']['publish_time']}</span>
+							<span class="badge">文章发表用户id:{$article_id_jg_return['msg']['user_id']}</span>
+							<span class="badge">查看次数:{$article_id_jg_return['msg']['see_frequency']}</span>
+							<span class="badge">评论次数:{$article_id_jg_return['msg']['comment_frequency']}</span>
+							<span class="badge">赞次数:{$article_id_jg_return['msg']['fabulous_frequency']}</span>
+						</div>
+					</div>
+			        <h1>文章标题:{$article_id_jg_return['msg']['title']}</h1>
+			        <p>文章内容:{$article_id_jg_return['msg']['content']}</p>
+			    </div>
+				<div id="pl_xs">
+				    <ul class="list-group"></ul>
+				</div>
+				<div id="div_gn">
+					<form action="" id="fbplform" autocomplete="off" name="fbplform" method="post" target="0">
+					    <textarea class="col-xs-12 col-sm-12 col-md-12 form-control" id="textarea_fbpl" name="content" placeholder="主要内容" cols="25" rows="5" aria-describedby="basic-addon1"></textarea>
+					    <button type="button" class="btn btn-default" id="button_fbpl" onsubmit='return false';>发表评论</button>
+					</form>
+					<button type="button" class="btn btn-default" id="button_dz" onsubmit='return false';>点赞</button>
+					<p><a id="button_scwz" class="btn btn-primary btn-lg" href="#" role="button">删除文章</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

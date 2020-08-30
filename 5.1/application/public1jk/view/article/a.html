@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {load href="/rko/public/static/js/jquery-3.4.1.min.js" /}
+    {load href="/rko/public/static/css/bootstrap.min.css" /}
+    {load href="/rko/public/static/css/layui.mobile.css" /}
+    {load href="/rko/public/static/css/layui.css" /}
+    {load href="/rko/public/static/js/layui.all.js" /}
+    {load href="/rko/public/static/js/layui.js" /}
+    <script type="text/javascript">
+        $(function () {
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div>
+        <ul class="layui-timeline">
+            {volist name='list' id='e'}
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                    <h3 class="layui-timeline-title">{$e.publish_time|date="Y年n月d日 H时i分s秒"}</h3>
+                    <p>
+                        标题:{$e.title}
+                        内容ID:{$e.content_id}
+                        查看次数:{$e.see_frequency}
+                        评论数量:{$e.comment_frequency}
+                        点赞数量:{$e.fabulous_frequency}
+                        内容:{$list_content[$i-1]['content']}
+                    </p>
+                </div>
+            </li>
+            {/volist}
+        </ul>
+    </div>
+
+
+
+    <nav aria-label="Page navigation">
+        {$list|raw}
+    </nav>
+</div>
+
+</body>
+</html>

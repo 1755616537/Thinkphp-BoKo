@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <ul>
+            {volist name='list' id='user'}
+            <li> {$user.id}</li>
+            {/volist}
+        </ul>
+    </div>
+    {$list->render()}
+</div>
+
+</body>
+</html>

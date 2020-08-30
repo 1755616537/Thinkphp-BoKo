@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {load href="/rko/public/static/js/jquery-3.4.1.min.js" /}
+    {load href="/rko/public/static/js/bootstrap.min.js" /}
+    {load href="/rko/public/static/css/bootstrap.min.css" /}
+    {load href="/rko/public/static/js/layer.js" /}
+
+    {load href="/rko/public/static/css/xlogin.css" /}
+    {load href="/rko/public/static/js/xlogin.js" /}
+</head>
+<body>
+<div class="dakuang">
+<!--    关闭按钮-->
+<!--    <div class="close">-->
+<!--        <a id="close" href="javascript:void(0);" title="关闭" tabindex="14"></a>-->
+<!--    </div>-->
+<!--    登陆-->
+    <div class="login" style="height: 783px;">
+        <div class="login_show">
+            <div class="login_web">
+                <div class="tips">
+                    <div class="tips_1">帐号密码登录</div>
+<!--                    <div class="tips_2">-->
+<!--                        推荐使用-->
+<!--                        <a hidefocus="true" id="fast_login" href="javascript:void(0);" tabindex="7">快速安全登录</a>-->
+<!--                        ，防止盗号。-->
+<!--                    </div>-->
+                </div>
+                <div class="login_form">
+                    <form action="{:url('/login')}" id="loginform" autocomplete="off" name="loginform" method="post" target="0">
+                        <div class="userlogin">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户名" name="userlogin" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="password">
+                            <div class="input-group">
+                                <input type="password" class="form-control" placeholder="密码" name="password" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <div class="btn-group" role="group">
+                                <button type="button" id="button_login" class="btn btn-default" style="width: 100%;" onsubmit='return false';>登陆</button>
+                            </div>
+                        </div>
+                        <div class="verify" style="padding-top: 50px;">
+                            <div class="input-group" style="width: 136px;text-align:center;position: relative;float: left;">
+                                <input type="verify" class="form-control" placeholder="验证码" name="verify" aria-describedby="basic-addon1">
+                            </div>
+                            <div style="width: 50%;position: relative;float: left;"><img src="{:url('/gainVerification')}" alt="captcha" id="verify" style="width: 136px;height: 42px;" onclick="this.src=this.src+'?'+Math.random()"></div>
+                        </div>
+                    </form>
+                    <form action="{:Url('/register')}" id="registerform" autocomplete="off" name="loginform" method="post" target="0">
+                        <div class="userlogin">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户名" name="userlogin" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="password">
+                            <div class="input-group">
+                                <input type="password" class="form-control" placeholder="密码" name="password" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <div class="btn-group" role="group">
+                                <button type="button" id="button_register" class="btn btn-default" style="width: 100%;" onsubmit='return false';>注册</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="{:Url('/retrieve')}" id="retrieveform" autocomplete="off" name="loginform" method="post" target="0">
+                        <div class="userlogin">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户名" name="userlogin" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="password">
+                            <div class="input-group">
+                                <input type="password" class="form-control" placeholder="密码" name="password" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <div class="btn-group" role="group">
+                                <button type="button" id="button_retrieve" class="btn btn-default" style="width: 100%;" onsubmit='return false';>找回密码</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="bottom_web">
+                <a id="a_login" href="javascript:void(0)" class="link">登陆账号</a>
+                <span class="dotted">|</span>
+                <a id="a_register" href="javascript:void(0)" class="link">注册新帐号</a>
+                <span class="dotted">|</span>
+                <a id="a_retrieve" href="javascript:void(0)" class="link">忘了密码？</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/bootstrap.min.css" />
+    <script src="__JS__/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="__JS__/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__JS__/layer.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/login_kuang.css" />
+    <script src="__JS__/login_kuang.js" type="text/javascript"></script>
+
+</head>
+<body style="width: 360px;height: 418px;">
+<div class="div-dlzcpz" style="width: 360px;height: 418px;">
+<!--登陆-->
+<div class="dlzcpz_srk" id="login_div">
+    <h2>登陆</h2>
+    <!-- 输入框 -->
+    <div class="dlzcpz_srk_xiaokuang1">
+        <form action="{:Url('shiFou_login')}" method="post" target="id_iframe" action="" id="form_login" enctype="multipart/form-data">
+        <!-- 邮箱或用户名 -->
+        <div class="dlzcpz_srk_xiaokuang1_1">
+            <input autocomplete="off" name="dlzcpz_input-userlogin" type="text" title="" required="required" placeholder="邮箱或用户名">
+        </div>
+        <!-- 密码 -->
+        <div class="dlzcpz_srk_xiaokuang1_1">
+            <input autocomplete="new-password" name="dlzcpz_input-password" type="password" title="" required="required" placeholder="密码">
+        </div>
+        </form>
+        <button class="dlzcpz_srk_xiaokuang1-button" type="submit" id="button_login" onsubmit='return false';>提交</button>
+        <!-- 其他链接 -->
+        <div class="dlzcpz_srk_xiaokuang1_2">
+            <a href="javascript:void(0)" class="tiaozuan_zc">注册账号</a>
+            <a href="javascript:void(0)" class="tiaozuan_zhmm">忘记密码</a>
+        </div>
+    </div>
+    <!-- 快捷登陆 -->
+    <div class="dlzcpz_srk_xiaokuang2">
+        <p>使用社交账户登录</p>
+        <div class="dlzcpz_srk_xiaokuang2_1">
+            <a href="{:Url('quit'),true}"><i>退</i></a>
+            <a href="javascript:void(0)"><i>Q</i></a>
+        </div>
+    </div>
+</div>
+
+<!--注册-->
+    <div class="zc dlzcpz_srk" id="register_div">
+        <h2>注册</h2>
+        <!-- 输入框 -->
+        <div class="dlzcpz_srk_xiaokuang1">
+            <form action="{:Url('register')}" method="post" target="id_iframe" action="" id="form_register" enctype="multipart/form-data">
+                <!-- 邮箱或用户名 -->
+                <div class="dlzcpz_srk_xiaokuang1_1">
+                    <input autocomplete="off" name="dlzcpz_input-userlogin" type="text" title="" required="required" placeholder="邮箱或用户名">
+                </div>
+                <!-- 密码 -->
+                <div class="dlzcpz_srk_xiaokuang1_1">
+                    <input autocomplete="new-password" name="dlzcpz_input-password" type="password" title="" required="required" placeholder="密码">
+                </div>
+            </form>
+            <button class="dlzcpz_srk_xiaokuang1-button" type="submit" id="button_register" onsubmit='return false';>提交</button>
+            <!-- 其他链接 -->
+            <div class="dlzcpz_srk_xiaokuang1_2">
+                <a href="javascript:void(0)" class="tiaozuan_dl">登陆账号</a>
+                <a href="javascript:void(0)" class="tiaozuan_zhmm">忘记密码</a>
+            </div>
+        </div>
+        <!-- 快捷登陆 -->
+        <div class="dlzcpz_srk_xiaokuang2">
+            <p>使用社交账户登录</p>
+            <div class="dlzcpz_srk_xiaokuang2_1">
+                <a href="javascript:void(0)"><i>Q</i></a>
+                <a href="javascript:void(0)"><i>Q</i></a>
+            </div>
+        </div>
+    </div>
+
+<!--找回密码-->
+    <div class="zhmm dlzcpz_srk" id="retrieve_div">
+        <h2>找回密码</h2>
+        <!-- 输入框 -->
+        <div class="dlzcpz_srk_xiaokuang1">
+            <form action="{:Url('retrieve')}" method="post" target="id_iframe" action="" id="form_retrieve" enctype="multipart/form-data">
+                <!-- 邮箱或用户名 -->
+                <div class="dlzcpz_srk_xiaokuang1_1">
+                    <input autocomplete="off" name="dlzcpz_input-userlogin" type="text" title="" required="required" placeholder="邮箱或用户名">
+                </div>
+                <!-- 密码 -->
+                <div class="dlzcpz_srk_xiaokuang1_1">
+                    <input autocomplete="new-password" name="dlzcpz_input-password" type="password" title="" required="required" placeholder="密码">
+                </div>
+            </form>
+            <button class="dlzcpz_srk_xiaokuang1-button" type="submit" id="button_retrieve" onsubmit='return false';>提交</button>
+            <!-- 其他链接 -->
+            <div class="dlzcpz_srk_xiaokuang1_2">
+                <a href="javascript:void(0)" class="tiaozuan_dl">登陆账号</a>
+                <a href="javascript:void(0)" class="tiaozuan_zc">注册账号</a>
+            </div>
+        </div>
+        <!-- 快捷登陆 -->
+        <div class="dlzcpz_srk_xiaokuang2">
+            <p>使用社交账户登录</p>
+            <div class="dlzcpz_srk_xiaokuang2_1">
+                <a href="javascript:void(0)"><i>Q</i></a>
+                <a href="javascript:void(0)"><i>Q</i></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
